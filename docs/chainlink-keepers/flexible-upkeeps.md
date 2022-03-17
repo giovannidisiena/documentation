@@ -129,7 +129,7 @@ Let’s now perform the same test to compare the gas fees:
 
 1. Withdraw 100 at 10,100,300,350,500,600,670,700,900. Pass the following to the withdarw function: 100,[10,100,300,350,500,600,670,700,900] (Same test as the [previous section](#problem-on-chain-computation-leads-to-high-gas-fees)).
 
-1. Now, register 3 upkeeps for your contract as explained [here](/docs/chainlink-keepers/register-upkeep/). Because the keepers handle much of the computation off-chain, a gas limit of 200,000 should be sufficient. For each registration, pass the following _CheckData_ values(second column) to specify which balance indexes the registration will monitor.
+1. Now, register 3 upkeeps for your contract as explained [here](/docs/chainlink-keepers/register-upkeep/). Because the keepers handle much of the computation off-chain, a gas limit of 200,000 should be sufficient. For each registration, pass the following _CheckData_ values(second column) to specify which balance indexes the registration will monitor. **Note**: Remove any breaking line when copying the values.
 
    | Upkeep Name             | CheckData(base16)                                                                                                                                      | Remark: calculated using [`abi.encode()`](https://docs.soliditylang.org/en/develop/abi-spec.html#strict-encoding-mode) |
    | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------- |
