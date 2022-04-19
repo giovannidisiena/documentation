@@ -65,7 +65,7 @@ Let’s walk through the contract:
   - Calling `performUpkeep()` function to re-balance the elements. Note that all the computation is done within the transaction: The function finds all the elements which are less than `LIMIT`, decreases the contract `liquidity` and increases every found element to `LIMIT`.
 
 ```solidity
-{% include samples/Keepers/BalancerOnChain.sol %}
+{% include 'samples/Keepers/BalancerOnChain.sol' %}
 ```
 
 <div class="remix-callout">
@@ -114,7 +114,7 @@ The main differences with the previous contract are the following (cf. contract 
 > `require(_balance == LIMIT, "Provided increment not correct");`
 
 ```solidity
-{% include samples/Keepers/BalancerOffChain.sol %}
+{% include 'samples/Keepers/BalancerOffChain.sol' %}
 ```
 
 <div class="remix-callout">
