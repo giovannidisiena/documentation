@@ -5,8 +5,7 @@ date: Last Modified
 title: 'Build highly flexible, cheap, and secure automation using Chainlink Keepers'
 whatsnext:
   {
-    'Utility Contracts': '/docs/chainlink-keepers/utility-contracts/',
-    'Network Overview': '/docs/chainlink-keepers/overview/',
+    'Utility Contracts': '/docs/chainlink-keepers/util-overview/',
     'FAQs': '/docs/chainlink-keepers/faqs/',
   }
 ---
