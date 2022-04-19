@@ -3,11 +3,7 @@ layout: nodes.liquid
 section: ethereum
 date: Last Modified
 title: 'Build highly flexible, cheap, and secure automation using Chainlink Keepers'
-whatsnext:
-  {
-    'Utility Contracts': '/docs/chainlink-keepers/util-overview/',
-    'FAQs': '/docs/chainlink-keepers/faqs/',
-  }
+whatsnext: { 'Utility Contracts': '/docs/chainlink-keepers/util-overview/', 'FAQs': '/docs/chainlink-keepers/faqs/' }
 ---
 
 ## Overview
@@ -39,7 +35,7 @@ This tutorial assumes you have a basic understanding of [Chainlink Keepers](http
   - [Making Compatible Contracts](/docs/chainlink-keepers/compatible-contracts/)
   - [Register UpKeep for a Contract](/docs/chainlink-keepers/register-upkeep/)
 
-Chainlink Keepers are supported on these [networks](/docs/chainlink-keepers/introduction/#supported-blockchain-networks).
+Chainlink Keepers are supported on these [networks](../supported-networks).
 You will need LINK tokens to run the examples in this tutorial. Hence:
 
 - Get [LINK](/docs/link-token-contracts/) on the supported testnet that you want to use.
@@ -75,7 +71,7 @@ Let’s walk through the contract:
 
 Follow these steps to test the example:
 
-1. Deploy the contract using Remix on the [supported testnet](/docs/chainlink-keepers/introduction/#supported-blockchain-networks) of your choice.
+1. Deploy the contract using Remix on the [supported testnet](../supported-networks) of your choice.
 
 1. Before registering the upkeep for your contract, decrease the balances of some elements. Still on Remix:
    Withdraw 100 at 10,100,300,350,500,600,670,700,900. Pass the following to the withdraw function: 100,[10,100,300,350,500,600,670,700,900]
@@ -97,7 +93,7 @@ Follow these steps to test the example:
 In this example, the `performUpkeep()` function used **2,481,379** gas. This example has two main issues:
 
 - All computation is done in `performUpkeep()` , which is a state modifying function, leading to high gas consumption.
-- This example is simple but looping over large arrays with state updates can cause the transaction to hit the [gas limit](/docs/chainlink-keepers/register-upkeep/#gas-limits) , preventing the performUpkeep from running successfully.  
+- This example is simple but looping over large arrays with state updates can cause the transaction to hit the gas limit of the [network](../supported-networks) , preventing the performUpkeep from running successfully.  
   In the next [section](#solution-perform-complex-computations-with-no-gas-fees), you will leverage the flexibility of Chainlink Keepers to reduce gas fees and mitigate the risks of running out of gas.
 
 ## Solution: Perform complex computations with no gas fees
@@ -124,7 +120,7 @@ The main differences with the previous contract are the following (cf. contract 
 
 Let’s now perform the same test to compare the gas fees:
 
-1. Deploy the contract using Remix on the [supported testnet](/docs/chainlink-keepers/introduction/#supported-blockchain-networks) of your choice.
+1. Deploy the contract using Remix on the [supported testnet](../supported-networks) of your choice.
 
 1. Withdraw 100 at 10,100,300,350,500,600,670,700,900. Pass the following to the withdarw function: 100,[10,100,300,350,500,600,670,700,900] (Same test as the [previous section](#problem-on-chain-computation-leads-to-high-gas-fees)).
 
