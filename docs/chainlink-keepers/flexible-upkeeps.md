@@ -15,8 +15,6 @@ You will start by integrating an unoptimized contract to Chainlink Keepers (cf. 
 
 - [Prerequisites](#prerequisites)
 - [Problem: On-chain computation leads to high gas fees](#problem-on-chain-computation-leads-to-high-gas-fees)
-  - [Problem statement](#problem-statement)
-  - [Example](#example)
 - [Solution: Perform complex computations with no gas fees](#solution-perform-complex-computations-with-no-gas-fees)
 - [Conclusion](#conclusion)
 
@@ -30,26 +28,22 @@ Several DeFi projects already live on [Ethereum Mainnet](https://keepers.chain.l
 This tutorial assumes you have a basic understanding of [Chainlink Keepers](https://chain.link/keepers). If you are new to Keepers, then please start with the following:
 
 - [Chainlink Keepers announcement](https://blog.chain.link/chainlink-keepers-is-now-live-on-mainnet/)
-  - [Introduction](/docs/chainlink-keepers/introduction/)
-  - [Making Compatible Contracts](/docs/chainlink-keepers/compatible-contracts/)
-  - [Register UpKeep for a Contract](/docs/chainlink-keepers/register-upkeep/)
+- [Introduction](/docs/chainlink-keepers/introduction/)
+- [Making Compatible Contracts](/docs/chainlink-keepers/compatible-contracts/)
+- [Register UpKeep for a Contract](/docs/chainlink-keepers/register-upkeep/)
 
 Chainlink Keepers are supported on these [networks](../supported-networks).
-You will need LINK tokens to run the examples in this tutorial. Hence:
+We will be using Remix. Hence, you must be familiar with [deploying a solidity contract using Remix and Metamask](/docs/deploy-your-first-contract/).
 
-- Get [LINK](/docs/link-token-contracts/) on the supported testnet that you want to use.
-- Many token bridges give you ERC-20 Link tokens. Use [PegSwap](https://pegswap.chain.link/) to convert them to ERC-677 compatible tokens.
-
-Also, we will be using Remix. Hence, you must be familiar with [deploying a solidity contract using Remix and Metamask](/docs/deploy-your-first-contract/).
+> 📘 ERC677 Link
+>
+> - Get [LINK](/docs/link-token-contracts/) on the supported testnet that you want to use.
+> - For funding on Mainnet, you need ERC-677 LINK. Many token bridges give you ERC-20 LINK tokens. Use PegSwap to [convert Chainlink tokens (LINK) to be ERC-677 compatible](https://pegswap.chain.link/).
 
 ## Problem: On-chain computation leads to high gas fees
 
-### Problem statement
-
 In the 3 steps tutorial, we deployed a basic [counter contract](/docs/chainlink-keepers/compatible-contracts/#example-contract) and verified that at every 30 seconds, the counter was incremented. However, more complex use cases can require looping over arrays or performing expensive computation. This leads to expensive gas fees and ultimately increases the premium end-users have to pay to use your dApp.
 To illustrate this, let’s deploy a very simple contract that maintains internal balances.
-
-### Example
 
 Let’s walk through the contract:
 
