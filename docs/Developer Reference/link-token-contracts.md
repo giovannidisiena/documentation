@@ -29,6 +29,7 @@ The LINK token is an ERC677 token that inherits functionality from the ERC20 tok
 + [Harmony](#harmony)
 + [Moonriver](#moonriver)
 + [Moonbeam](#moonbeam)
++ [Metis](#metis)
 
 # Ethereum
 
@@ -363,5 +364,19 @@ GLMR is used to pay transaction fees on Moonbeam mainnet.
 |`ETH_CHAIN_ID`|`1284`|
 |Address|[`0x012414A392F9FA442a3109f1320c439C45518aC3`](https://moonscan.io/address/0x012414A392F9FA442a3109f1320c439C45518aC3)|
 |Name|ChainLink Token on Moonbeam Mainnet|
+|Symbol|LINK|
+|Decimals|18|
+
+## Metis
+
+### Mainnet
+
+METIS is the currency that you use to pay for transactions on Metis mainnet. You can use the [Metis Bridge](https://bridge.metis.io/) to transfer METIS and LINK from Ethereum Mainnet to Metis mainnet.
+
+|Parameter|Value|
+|:---|:---|
+|`ETH_CHAIN_ID`|`1088`|
+|Address|[`0x79892E8A3Aea66C8F6893fa49eC6208ef07EC046`](https://andromeda-explorer.metis.io/address/0x79892E8A3Aea66C8F6893fa49eC6208ef07EC046)|
+|Name|ChainLink Token on Metis Mainnet|
 |Symbol|LINK|
 |Decimals|18|
