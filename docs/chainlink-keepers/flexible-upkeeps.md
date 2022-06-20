@@ -38,7 +38,7 @@ Chainlink Keepers are supported on several [networks](../supported-networks).
 
 ## Problem: On-chain computation leads to high gas fees
 
-In the guide for [Making Keepers-compatible Contracts](k/docs/chainlink-keepers/compatible-contracts/), you deployed a basic [counter contract](/docs/chainlink-keepers/compatible-contracts/#example-contract) and verified that the counter increments every 30 seconds. However, more complex use cases can require looping over arrays or performing expensive computation. This leads to expensive gas fees and can increase the premium that end-users have to pay to use your dApp. To illustrate this, deploy an example contract that maintains internal balances.
+In the guide for [Making Keepers-compatible Contracts](/docs/chainlink-keepers/compatible-contracts/), you deployed a basic [counter contract](/docs/chainlink-keepers/compatible-contracts/#example-contract) and verified that the counter increments every 30 seconds. However, more complex use cases can require looping over arrays or performing expensive computation. This leads to expensive gas fees and can increase the premium that end-users have to pay to use your dApp. To illustrate this, deploy an example contract that maintains internal balances.
 
 The contract has the following components:
 
